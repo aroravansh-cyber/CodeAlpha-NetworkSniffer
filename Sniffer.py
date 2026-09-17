@@ -8,9 +8,9 @@ def analyze_packet(packet):
     global packet_count
     packet_count += 1
 
-    print("\n" + "=" * 120)
+    print("\n" + "=" * 130)
     print(f"Packet #{packet_count}")
-    print("=" * 120)
+    print("=" * 130)
 
     # ARP
     if ARP in packet:
@@ -103,10 +103,10 @@ def start_sniffer(packet_limit):
 
     packet_filter = get_ip_filter()
 
-    print("\n" + "=" * 120)
+    print("\n" + "=" * 130)
     print("[+] NETWORK SNIFFER STARTED")
     print("[!] NOTE: Please wait, packet capture may take some time.")
-    print("=" * 120)
+    print("=" * 130)
 
     if ip_version == "ipv4":
         print("[+] IP Version    : IPv4")
@@ -121,7 +121,7 @@ def start_sniffer(packet_limit):
         print(f"[+] Packet Limit   : {packet_limit}")
 
     print("[+] Press Ctrl+C to stop")
-    print("=" * 120)
+    print("=" * 130)
 
     try:
         sniff(
@@ -144,14 +144,14 @@ def select_ip_version():
     global ip_version
 
     while True:
-        print("\n" + "=" * 120)
+        print("\n" + "=" * 130)
         print("                 IP VERSION")
-        print("=" * 120)
+        print("=" * 130)
 
         print("1. IPv4")
         print("2. IPv6")
         print("3. Both IPv4 & IPv6")
-        print("=" * 120)
+        print("=" * 130)
 
         choice = input("Enter your choice: ").strip()
 
@@ -175,7 +175,7 @@ def main():
 
     while True:
 
-        print("\n" + "=" * 120)
+        print("\n" + "=" * 130)
 
         print("""
             ███╗   ██╗███████╗████████╗██╗    ██╗ ██████╗ ██████╗ ██╗  ██╗     ███████╗ ███╗   ██╗ ██╗ ███████╗ ███████╗ ███████╗ ██████╗
@@ -186,9 +186,9 @@ def main():
             ╚═╝  ╚═══╝╚══════╝   ╚═╝    ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝     ╚══════╝ ╚═╝  ╚═══╝ ╚═╝ ╚═╝      ╚═╝      ╚══════╝ ╚═╝  ╚═╝
         """)
 
-        print("=" * 120)
+        print("=" * 130)
         print("              NETWORK SNIFFER")
-        print("=" * 120)
+        print("=" * 130)
 
         print("\nSelect Packet Capture Mode:")
         print("1. Capture 10 packets")
@@ -197,7 +197,7 @@ def main():
         print("4. Capture packets continuously")
         print("5. Exit")
 
-        print("=" * 120)
+        print("=" * 130)
 
         choice = input("Enter your choice: ").strip()
 
