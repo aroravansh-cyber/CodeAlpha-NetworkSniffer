@@ -35,6 +35,20 @@ This tool captures live network traffic and analyzes packets flowing through a n
 <br></br>
 ---
 
+## How It Works
+
+The Network Sniffer uses **Scapy** to capture packets from the network interface through **Npcap** on Windows. Each captured packet is analyzed to identify its IP version, protocol, source and destination addresses, ports, and available payload information. The user can select the number of packets to capture and choose between IPv4, IPv6, or both.
+
+## How to Run
+
+1. Install **Python 3.x** and **Npcap** on Windows.
+2. Open the project folder in **Command Prompt or PowerShell**.
+3. Install the required dependency:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Sample output:
 ```
 [+] Sniffing started on interface: eth0
